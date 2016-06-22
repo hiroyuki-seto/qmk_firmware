@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        | LGui | ESC  |       |  NO  |  NO  |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      |  FN  |       | PGUP |        |      |
- *                                 |  FN  | SPC  |------|       |------|  SPC   | ENT  |
+ *                                 |  SPC | BSPC |------|       |------|  ENT   | SPC  |
  *                                 |      |      |  FN  |       | PGDN |        |      |
  *                                 `--------------------'       `----------------------'
  */
@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LGUI,        KC_LALT,      KC_UP,       KC_DOWN,   KC_MHEN,
                                                                KC_LGUI,       KC_ESC,
                                                                               TG(FN),
-                                                               MO(FN) ,KC_SPC,MO(FN),
+                                                               KC_SPC,KC_BSPC,MO(FN),
         // right hand
              KC_6,        KC_7,   KC_8,   KC_9,   KC_0,   KC_MINS,          KC_EQL,
              KC_DELT,     KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,             KC_LBRC,
@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   KC_KANA,KC_LEFT,KC_RIGHT,KC_RBRC,         KC_BSLS,
              KC_NO,       KC_NO,
              KC_PGUP,
-             KC_PGDN,KC_SPC,KC_ENT
+             KC_PGDN,KC_ENT,KC_SPC
     ),
 
 /* Keymap 1: Function Layer
