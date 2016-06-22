@@ -25,9 +25,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        ,-------------.       ,-------------.
  *                                        | LGui | ESC  |       |  NO  |  NO  |
  *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      |  NO  |       | PGUP |        |      |
+ *                                 |      |      |  FN  |       | PGUP |        |      |
  *                                 | BSPC | DELT |------|       |------| Enter  |Space |
- *                                 |      |      |  NO  |       | PGDN |        |      |
+ *                                 |      |      |  FN  |       | PGDN |        |      |
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT,        KC_Z,         KC_X,        KC_C,      KC_V,   KC_B,   KC_NO,
         KC_LGUI,        KC_LALT,      KC_UP,       KC_DOWN,   KC_MHEN,
                                                                KC_LGUI,       KC_ESC,
-                                                                              KC_NO,
+                                                                              TG(FN),
                                                                KC_BSPC,KC_DELT,MO(FN),
         // right hand
              KC_6,        KC_7,   KC_8,   KC_9,   KC_0,   KC_MINS,          KC_EQL,
@@ -64,14 +64,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |      |      |      |      |      |      |           |      |      |  1   |  2   |  3   |  -   |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |      |      | PGUP | PGDN |      |                                       |  0   |  0   |  .   |  +   |      |
+ *   |      |      | PGUP | PGDN |      |                                       |  0   |  0   |  .   |  +   |  =   |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |      | RESET|       |      |      |
  *                                 ,------|------|------|       |------+------+------.
- *                                 |      |      |      |       |      |      |      |
+ *                                 |      |      |  FN  |       |      |      |      |
  *                                 |      |      |------|       |------|RClick|LClick|
- *                                 |      |      |      |       |      |      |      |
+ *                                 |      |      |  FN  |       |      |      |      |
  *                                 `--------------------'       `--------------------'
  */
 // Fnctions
@@ -82,9 +82,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS,     KC_MS_L,    KC_MS_D, KC_MS_R, KC_TRNS, KC_TRNS,
        KC_TRNS,     KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
        KC_TRNS,     KC_TRNS,    KC_PGUP, KC_PGDN, KC_TRNS,
-                                                            MO(OSX), RESET,
-                                                                     KC_TRNS,
-                                                   KC_TRNS, KC_TRNS, KC_TRNS,
+                                                            KC_TRNS, RESET,
+                                                                     TG(OSX),
+                                                   KC_TRNS, KC_TRNS, MO(OSX),
        // right hand
        KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,   KC_F12,  KC_TRNS,
        KC_TRNS, KC_TRNS, KC_7,    KC_8,    KC_9,     KC_SLSH, KC_TRNS,
